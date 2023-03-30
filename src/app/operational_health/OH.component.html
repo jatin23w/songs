@@ -1,0 +1,107 @@
+<style>
+
+	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.highcharts.com/modules/accessibility.js">
+	function w3_open() {
+		console.log("hello")
+	  document.getElementById("mySidebar").style.display = "block";
+	}
+	
+	function w3_close() {
+	  document.getElementById("mySidebar").style.display = "none";
+	}
+</script>
+
+<meta name="viewport" content="">
+
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+	<button type="button" onclick="document.getElementById('mySidebar').style.display = 'none';" class="w3-bar-item w3-large">Close &times;</button>
+	<a href="#"  class="w3-bar-item w3-button w3-hover-white"> BCP <br> </a> 
+	  <a href="People" class="w3-bar-item w3-button w3-hover-white"> People <br></a> 
+	  <a href="Customer Experience" class="w3-bar-item w3-button w3-hover-white"> Customer Experience <br></a> 
+	  <a href="Operational Health" class="w3-bar-item w3-button w3-hover-white">Operational Health<br></a> 	
+	  <a href="Profit LOSS" class="w3-bar-item w3-button w3-hover-white">Profit & Loss<br></a>
+  </div>
+
+  <div class="w3-teal">
+	<button type="button" class="w3-button w3-teal w3-xlarge" onclick="document.getElementById('mySidebar').style.display = 'block'">☰</button>
+	<div class="w3-container">
+
+	</div>
+  </div>
+
+  
+<div class="heading">
+   <h2> Songs Operational Health <span class="dot-2"></span></h2>
+</div>
+<div class ="grid-container-1">
+	<h4>Key Metrics involved in People</h4>
+</div>
+
+<div class="grid-container-4">
+ 
+<button class="button-2">
+
+	<h5> SLA <span class="dot"></span> 
+	
+	</h5>
+</button>
+
+<button class="button-3">
+	<h5>Risk Management <span class="dot-2"></span>
+</h5>
+</button>
+
+<button class="button-3">
+
+	<h5> Change success Rate <span class="dot-2"></span>    </h5>
+
+</button>
+
+<button class="button-3">
+
+	<h5> P1/P2 with Outage <span class="dot-grey"></span>    </h5>
+
+</button>
+
+<button class="button-2">
+
+	<h5> Ageing <span class="dot-2"></span>    </h5>
+
+</button>
+
+<button class="button-2">
+
+	<h5> CSI <span class="dot-2"></span>    </h5>
+
+</button>
+ </div>
+
+ 
+
+
+
+
+
+
+
+<!-- <div class="pivot-container-4">
+
+		<fm-pivot #pivot
+			[toolbar]="false"
+			[shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+			[report]="pivotReport"
+			[height]="0"
+			[width]="0"
+			[licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'"
+			(reportcomplete)="onReportComplete()"
+			(beforetoolbarcreated)="customizeToolbar($event)"
+			>
+		</fm-pivot> -->
+
+
+	
+<!-- </div> -->

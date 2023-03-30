@@ -1,0 +1,120 @@
+<style>
+
+	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.highcharts.com/modules/accessibility.js">
+	function w3_open() {
+		console.log("hello")
+	  document.getElementById("mySidebar").style.display = "block";
+	}
+	
+	function w3_close() {
+	  document.getElementById("mySidebar").style.display = "none";
+	}
+</script>
+
+<meta name="viewport" content="">
+
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+	<button type="button" onclick="document.getElementById('mySidebar').style.display = 'none';" class="w3-bar-item w3-large">Close &times;</button>
+	<a href="#"  class="w3-bar-item w3-button w3-hover-white"> BCP <br> </a> 
+	  <a href="People" class="w3-bar-item w3-button w3-hover-white"> People <br></a> 
+	  <a href="Customer Experience" class="w3-bar-item w3-button w3-hover-white"> Customer Experience <br></a> 
+	  <a href="Operational Health" class="w3-bar-item w3-button w3-hover-white">Operational Health<br></a> 	
+	  <a href="Profit LOSS" class="w3-bar-item w3-button w3-hover-white">Profit & Loss<br></a>
+  </div>
+
+  <div class="w3-teal">
+	<button type="button" class="w3-button w3-teal w3-xlarge" onclick="document.getElementById('mySidebar').style.display = 'block'">☰</button>
+	<div class="w3-container">
+
+	</div>
+  </div>
+
+  
+<div class="heading">
+   <h2> Songs BCP Health  <span class="dot"></span></h2>
+</div>
+<div class ="grid-container-1">
+	<h4>Key Metrics involved in BCP</h4>
+</div>
+
+<div class="grid-container-3" >
+ 
+<div class="grid-item-1 " >
+
+	<h4> Connectivity <span class="dot-1" ></span> 
+	
+	</h4>
+</div>
+
+<div class="grid-item-1">
+	<h4> Collaboration Tools <span class="dot-1"></span>
+</h4>
+</div>
+
+<div class="grid-item-1">
+
+	<h4> Productivity <span class="dot"></span>    </h4>
+
+</div>
+ </div>
+
+ 
+
+ <div class="ttt">
+	 <div class="table" *ngIf="datarecieved | async">
+	   <table class="table table-hover">
+		   <thead>
+			   <tr>
+				   <th *ngFor="let col of colname">{{col}}</th>
+			   </tr>
+		   </thead>
+		   <tbody>
+			   <tr *ngFor="let row of rowdata">
+				   <td>{{row[0]}}</td>
+				   <td>{{row[1]}}</td>
+				   <td>{{row[2]}}</td>
+				   <td>{{row[3]}}</td>
+				   <td>{{row[4]}}</td>
+				   <td>{{row[5]}}</td>
+				   <td>{{row[5]}}</td>
+				<td>{{row[6]}}</td>
+				<td>{{row[7]}}</td>
+				<td>{{row[8]}}</td>
+
+				<td>{{row[9]}}</td>
+				<td>{{row[10]}}</td>
+
+				<td>{{row[11]}}</td>
+				<td>{{row[12]}}</td>
+			   </tr>
+		   </tbody>
+	   </table> 
+	</div>
+
+
+
+
+
+
+
+<div class="pivot-container-4">
+
+		<fm-pivot #pivot
+			[toolbar]="true"
+			[shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+			[report]="pivotReport"
+			[height]="0"
+			[width]="0"
+			[licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'"
+			(reportcomplete)="onReportComplete()"
+			(beforetoolbarcreated)="customizeToolbar($event)"
+			>
+		</fm-pivot>
+
+
+	
+</div>
